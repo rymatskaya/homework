@@ -12,10 +12,12 @@ import java.util.List;
  * (методы коллекций size(), addAll()); Сигнатура метода: public void transferToGroup(Group newGroup);
  * 1.6. Реализовать метод в классе Group, который считает средний бал по группе.
  * Сигнатуру и название придумайте сами.
+
  */
 public class Group {
     private String group;
     private List<Student> students;
+
 
     public Group(String group, List<Student> students) {
         this.group = group;

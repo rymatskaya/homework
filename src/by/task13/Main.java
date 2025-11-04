@@ -1,5 +1,7 @@
 package by.task13;
 
+import by.task13.enums.FacultyAct;
+
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -48,6 +50,11 @@ public class Main {
         double avMark = group2.avarageMarkGroup();
         System.out.println("Средний балл по группе " + group2.getGroup() + " : "  + avMark);
 
-        Faculty faculty = new Faculty("Математический",groups);
+        Faculty faculty = new Faculty("Математический",groups, FacultyAct.ACTIVE);
+        faculty.changeStatus();
+        System.out.println("Студенты в порядке возрастания: ");
+        faculty.listAvarageMark(true);
+        System.out.println("Студенты в порядке убывания: ");
+        faculty.listAvarageMark(false);
     }
 }
