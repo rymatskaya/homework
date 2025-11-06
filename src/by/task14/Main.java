@@ -35,38 +35,38 @@ public class Main {
         patients2.add(patient5);
         patients2.add(patient6);
 
-        for (Patient patient : patients2) {
-            System.out.println(patient);
-        }
+//        for (Patient patient : patients2) {
+//            System.out.println(patient);
+//        }
 
-        Ward ward1 = new Ward(12, Sex.MALE, patients1);
-        Patient patient7 = new Patient(10,"Колян", "Крот", "глисты", 78, Sex.MALE);
-        ward1.addBasedDiagnosis(patient7);
+//        Ward ward1 = new Ward(12, Sex.MALE, patients1);
+//        Patient patient7 = new Patient(10,"Колян", "Крот", "глисты", 78, Sex.MALE);
+//        ward1.addBasedDiagnosis(patient7);
         Patient patient8 = new Patient(9,"Ян", "Лях", "инфаркт", 44, Sex.MALE);
-        ward1.addBasedDiagnosis(patient8);
-        Ward ward2 = new Ward(21, Sex.FAMALE, patients2);
+//        ward1.addBasedDiagnosis(patient8);
+//        Ward ward2 = new Ward(21, Sex.FAMALE, patients2);
         Patient patient9 = new Patient(8,"Маша", "Сидорова", "порок сердца", 43, Sex.FAMALE);
-        ward2.addBasedDiagnosis(patient9);
-        Set<Ward> wards = new HashSet<Ward>();
-        wards.add(ward1);
-        wards.add(ward2);
+//        ward2.addBasedDiagnosis(patient9);
+//        Set<Ward> wards = new HashSet<Ward>();
+//        wards.add(ward1);
+//        wards.add(ward2);
 
-        Department department = new Department("Кардиология", wards);
-        department.count();
-
-        ward1.print();
-        ward2.print();
+//        Department department = new Department("Кардиология", wards);
+//        department.count();
+//
+//        ward1.print();
+//        ward2.print();
 
         /** * 1.8*. Сортировать пациентов по идентификационному номеру. (коллекция TreeSet, интерфейс Comparable)
          * Для этого в классе Палата пациенты должны лежать в коллекции TreeSet. А класс пациент должен
-         * имплементировать интерфейс Comparable
+         * имплементировать интерфейс Comparable*/
         Set<Patient> patientsTreeSet = new TreeSet<>();
         patientsTreeSet.add(patient5);
         patientsTreeSet.add(patient8);
         patientsTreeSet.add(patient9);
 
         Ward ward3 = new Ward(6, Sex.FAMALE, patientsTreeSet);
-        ward3.print();*/
+        ward3.print();
 
     }
 }

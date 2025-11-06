@@ -8,7 +8,7 @@ import java.util.Objects;
  * 1.1 У пациента поля:
  * уникальный идентификатор, имя, фамилия, диагноз, возраст,
  * пол (сделать enum класс: Мужской, Женский).*/
-public class Patient /*implements Comparable<Patient>*/  {
+public class Patient implements Comparable<Patient>  {
     private int unId;
     private String name;
     private String surname;
@@ -65,7 +65,7 @@ public class Patient /*implements Comparable<Patient>*/  {
     }
 
     public Patient(int unId, String name, String surname, String diagnosis, int age, Sex sex) {
-        unId = unId;
+        this.unId = unId;
         this.name = name;
         this.surname = surname;
         this.diagnosis = diagnosis;
@@ -99,8 +99,8 @@ public class Patient /*implements Comparable<Patient>*/  {
                 '}';
     }
 
-//    @Override
-//    public int compareTo(Patient o) {
-//        return Integer.compare(this.unId, o.unId);
-//    }
+    @Override
+    public int compareTo(Patient o) {
+        return Integer.compare(this.unId, o.unId);
+    }
 }
